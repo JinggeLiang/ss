@@ -75,5 +75,5 @@ if __name__ == "__main__":
     new_links = []
     change_remark()
     new_links.sort(key=sort_name)
-    url = "https://api.github.com/repos/JinggeLiang/SS/contents/v2"
+    url = "https://api.github.com/repos/JinggeLiang/ss/contents/v2"
     update_github_file(token, url, bs64_encode("\n".join(l for l in new_links)))
