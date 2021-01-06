@@ -26,7 +26,7 @@ class Vmess:
                 dGxzJywgJ2hvc3Q1OiAnd3d3LjA5MjE5NzYzNTQueHl6JywgJ3BhdGgnOiAnL2Zvb3RlcnMnLCAn
                 dGxzJzogJ3Rscyd9
         """
-        return "vmess://" + bs64_encode(get_unicode(str(self.config)))
+        return "vmess://" + bs64_encode(get_unicode(str(self._config).replace("'", '"')))
 
     @property
     def config(self):
