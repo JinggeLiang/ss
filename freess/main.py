@@ -52,8 +52,8 @@ def change_remark():
             tasks.append(threading.Thread(target=change_trojan_remark, args=(trojan,)))
         elif ser_type == "vmess":
             vmess = Vmess(link)
-            if not rex.search(vmess.config["host"]):
-                tasks.append(threading.Thread(target=change_vmess_remark, args=(vmess,)))
+            # if not rex.search(vmess.config["host"]):
+            tasks.append(threading.Thread(target=change_vmess_remark, args=(vmess,)))
 
     [t.start() for t in tasks]
     [t.join() for t in tasks]
